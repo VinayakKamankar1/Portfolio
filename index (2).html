@@ -1,0 +1,215 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vinayak Kamankar | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0a0f24;
+      --accent-color: #14b8a6;
+      --text-color: #f1f5f9;
+      --card-bg: #1e293b;
+      --card-hover: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+    }
+
+    nav {
+      width: 240px;
+      background: #111827;
+      height: 100vh;
+      padding: 2rem 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    nav h2 {
+      color: var(--accent-color);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 1rem 0;
+    }
+
+    nav ul li a {
+      color: var(--text-color);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent-color);
+    }
+
+    .content {
+      margin-left: 240px;
+      width: calc(100% - 240px);
+    }
+
+    header {
+      background: #0a0f24;
+      text-align: center;
+      padding: 4rem 1rem;
+      height: 30vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--accent-color);
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      transition: background 0.3s ease;
+    }
+
+    section:hover {
+      background: var(--card-hover);
+    }
+
+    section h2 {
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    ul li::before {
+      content: '• ';
+      color: var(--accent-color);
+    }
+
+    .project-card {
+      background: #0f172a;
+      border-radius: 1rem;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-card h3 {
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <h2>Portfolio</h2>
+  <ul>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#internships">Internships</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="content">
+  <header>
+    <h1>Vinayak Kamankar</h1>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>🎯 About Me</h2>
+      <p>B.Tech student in AI & ML with hands-on experience in building real-world smart solutions using Python, Java, IoT, and Embedded Systems. Enthusiastic about computer vision, automation, and data-driven innovations.</p>
+    </section>
+
+    <section id="skills">
+      <h2>🛠 Skills</h2>
+      <ul>
+        <li>Languages: Python, Java, C</li>
+        <li>IoT: Arduino, NodeMCU, GSM, Sensors</li>
+        <li>Software: Power BI, DevOps (Basics), CAD</li>
+        <li>Soft Skills: Leadership, Communication, Creativity</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>💡 Projects</h2>
+      <div class="project-card">
+        <h3>Drowsiness Detection System</h3>
+        <p>Computer vision-based solution using OpenCV and Python that detects driver fatigue in real-time by analyzing eye and facial movement. It triggers audio alarms to avoid accidents.</p>
+      </div>
+      <div class="project-card">
+        <h3>Hydro Guardian: Smart Irrigation</h3>
+        <p>IoT-enabled solar irrigation system that monitors soil moisture and predicts weather. It automates watering to reduce waste, enhance crop yield, and support sustainable farming.</p>
+      </div>
+      <div class="project-card">
+        <h3>IoT-Based Industrial Safety</h3>
+        <p>A multi-sensor environment monitoring system for factories. It detects gas leaks, fire, and loud noise and sends GSM alerts while triggering automatic power cutoffs.</p>
+      </div>
+      <div class="project-card">
+        <h3>Smart Traffic Management (Ongoing)</h3>
+        <p>Uses AI and sensors to measure vehicle density and dynamically control signal timings. Reduces traffic congestion in real-time and improves urban mobility efficiency.</p>
+      </div>
+    </section>
+
+    <section id="internships">
+      <h2>💼 Internships</h2>
+      <ul>
+        <li><strong>Electrical Intern</strong> at Maceltron Machines Pvt. Ltd (Jan 2024 – Apr 2024)</li>
+        <li>Contributed to industrial electrical system maintenance and automation project support</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>📬 Contact</h2>
+      <ul>
+        <li>Email: kamankarvinayak1@gmail.com</li>
+        <li>LinkedIn: vinayak-kamankar-541770349</li>
+        <li>GitHub: VinayakKamankar1</li>
+        <li>Phone: 7083571601</li>
+        <li>Address: Jakhori, Nashik, Maharashtra</li>
+        <li>Languages: English, Hindi, Marathi</li>
+      </ul>
+    </section>
+
+    <footer>
+      &copy; 2025 Vinayak Kamankar — All rights reserved.
+    </footer>
+  </main>
+</div>
+
+</body>
+</html>
