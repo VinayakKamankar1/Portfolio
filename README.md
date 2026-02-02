@@ -1,6 +1,6 @@
 # Vinayak Kamankar - Portfolio Website
 
-A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS showcasing projects, skills, and professional experience.
+A modern, responsive portfolio website showcasing projects, skills, and professional experience.
 
 ## 🚀 Features
 
@@ -12,45 +12,19 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - **Contact Integration** with email and phone links
 - **Project Showcase** with detailed descriptions and technologies
 
-## 🛠️ Tech Stack
-
-### Frontend
-- **React 18** - UI framework
-- **TypeScript** - Type-safe development
-- **Vite** - Fast build tool and dev server
-- **Tailwind CSS** - Utility-first CSS framework
-- **shadcn/ui** - Modern UI component library
-
-### Icons & Assets
-- **Lucide React** - Icon library
-- **Custom Gradients** - Visual effects
-
-## 📁 Project Structure
+## 📁 Static Site Structure
 
 ```
-src/
-├── components/          # React components
-│   ├── ui/             # shadcn/ui components
-│   ├── About.tsx       # About section
-│   ├── Contact.tsx     # Contact section
-│   ├── Education.tsx   # Education details
-│   ├── Experience.tsx  # Work experience
-│   ├── Footer.tsx      # Footer component
-│   ├── Hero.tsx        # Hero section
-│   ├── Navigation.tsx  # Navigation bar
-│   ├── Projects.tsx    # Projects showcase
-│   └── Skills.tsx      # Skills section
-├── hooks/              # Custom React hooks
-│   ├── useScrollAnimation.ts
-│   └── useScrollAnimations.ts
-├── pages/              # Page components
-│   ├── Index.tsx       # Home page
-│   └── NotFound.tsx    # 404 page
-├── lib/                # Utility functions
-├── assets/             # Static assets
-├── App.tsx             # Main app component
-├── main.tsx            # Entry point
-└── index.css           # Global styles
+portfolio/
+├── index.html          # Main HTML file
+├── assets/             # Optimized CSS and JS
+│   ├── index-*.css     # Stylesheets
+│   ├── index-*.js      # JavaScript bundles
+│   └── *.jpg          # Images and assets
+├── Vinayak Kamankar.pdf  # Resume
+├── favicon.ico         # Site icon
+├── robots.txt          # SEO configuration
+└── lovable-uploads/    # Media assets
 ```
 
 ## 🎨 Design Features
@@ -109,94 +83,28 @@ src/
 - Resume download
 - Call-to-action
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/VinayakKamankar1/Portfolio.git
-   cd Portfolio
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open browser**
-   Navigate to `http://localhost:8080`
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-### Preview Production Build
-
-```bash
-npm run preview
-```
-
-## 📄 Resume
-
-The resume PDF is included in the project and can be downloaded from the Contact section or accessed directly at `/public/Vinayak Kamankar.pdf`.
-
-## 🔧 Configuration
-
-### Tailwind CSS
-The project uses Tailwind CSS with custom configuration for:
-- Custom color palette
-- Extended animations
-- Responsive breakpoints
-
-### TypeScript
-Strict TypeScript configuration for type safety and better development experience.
-
 ## 🌐 Deployment
 
+This is a **static site** that can be deployed to any hosting platform:
+
 ### GitHub Pages
-1. Build the project: `npm run build`
-2. Deploy `dist` folder to GitHub Pages
-3. Configure GitHub Pages settings
+1. Push to GitHub repository
+2. Enable GitHub Pages in repository settings
+3. Select source branch (main)
 
-### Vercel/Netlify
-1. Connect repository
-2. Configure build settings
-3. Deploy automatically
+### Vercel
+1. Connect repository to Vercel
+2. Auto-deployment on push
 
-## 📱 Responsive Design
+### Netlify
+1. Drag and drop the folder to Netlify
+2. Or connect repository for continuous deployment
 
-The portfolio is fully responsive and optimized for:
-- **Desktop** (1200px+)
-- **Tablet** (768px - 1199px)
-- **Mobile** (320px - 767px)
-
-## 🎯 Performance
-
-- **Optimized images** and assets
-- **Lazy loading** for better performance
-- **Minimal bundle size** with tree shaking
-- **Fast animations** using CSS transforms
-
-## 🤝 Contributing
-
-This is a personal portfolio project. For suggestions or improvements:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make changes
-4. Submit a pull request
+### Other Static Hosting
+- **Firebase Hosting**
+- **AWS S3 + CloudFront**
+- **DigitalOcean App Platform**
+- **Any static file hosting**
 
 ## 📞 Contact
 
@@ -207,14 +115,14 @@ This is a personal portfolio project. For suggestions or improvements:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## 🙏 Acknowledgments
 
-- [shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
+- [React](https://reactjs.org/) for the UI framework
 - [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
 - [Lucide](https://lucide.dev/) for the icon library
-- [Vite](https://vitejs.dev/) for the fast development experience
+- [Vite](https://vitejs.dev/) for the fast build experience
 
 ---
 
