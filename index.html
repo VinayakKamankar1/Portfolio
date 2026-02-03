@@ -18,11 +18,161 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Theme Toggle Styles -->
+    <style>
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 200 95% 50%;
+        --primary-foreground: 240 10% 3.9%;
+        --secondary: 240 5% 96%;
+        --secondary-foreground: 240 10% 3.9%;
+        --muted: 240 5% 96%;
+        --muted-foreground: 240 5% 46.9%;
+        --accent: 190 95% 60%;
+        --accent-foreground: 240 10% 3.9%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5% 86%;
+        --input: 240 5% 86%;
+        --ring: 200 95% 50%;
+        --radius: 0.75rem;
+        --tech-primary: 200 95% 50%;
+        --tech-secondary: 190 95% 60%;
+        --tech-accent: 180 100% 70%;
+      }
+
+      [data-theme="dark"] {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 200 95% 50%;
+        --primary-foreground: 240 10% 3.9%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 190 95% 60%;
+        --accent-foreground: 240 10% 3.9%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 200 95% 50%;
+      }
+
+      .theme-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: hsl(var(--card));
+        border: 1px solid hsl(var(--border));
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .theme-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .theme-toggle svg {
+        width: 24px;
+        height: 24px;
+        color: hsl(var(--primary));
+        transition: all 0.3s ease;
+      }
+
+      .theme-toggle:hover svg {
+        transform: rotate(180deg);
+      }
+
+      body {
+        background: hsl(var(--background));
+        color: hsl(var(--foreground));
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .card-gradient {
+        background: hsl(var(--card));
+        border: 1px solid hsl(var(--border));
+      }
+
+      .text-gradient {
+        background: linear-gradient(135deg, hsl(var(--tech-primary)), hsl(var(--tech-secondary)));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .tech-shadow {
+        box-shadow: 0 10px 40px hsl(var(--tech-primary) / 0.3);
+      }
+
+      .glow-shadow {
+        box-shadow: 0 0 30px hsl(var(--tech-primary) / 0.6);
+      }
+    </style>
+    
     <script type="module" crossorigin src="/assets/index-DTJmL3Kd.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DNdImUjk.css">
   </head>
 
   <body>
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+      <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+      </svg>
+    </div>
+
     <div id="root"></div>
+
+    <script>
+      // Theme Toggle Functionality
+      function toggleTheme() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+      }
+
+      function updateThemeIcon(theme) {
+        const icon = document.getElementById('theme-icon');
+        if (theme === 'dark') {
+          // Sun icon for light mode
+          icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />';
+        } else {
+          // Moon icon for dark mode
+          icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />';
+        }
+      }
+
+      // Initialize theme on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+      });
+    </script>
   </body>
 </html>
